@@ -73,3 +73,83 @@ Data Visualization
 The dataset does not account for visa-free agreements (e.g., Schengen Visa).
 External factors such as COVID-19 travel restrictions may distort recent visa statistics.
 Future work could incorporate economic indicators (GDP, exchange rates) to refine insights on tourism demand.
+
+# Project Phase 2 : EDA, and Hypothesis Testing
+
+# Data Cleaning and Preprocessing
+
+- Merged datasets on Country (standardized case/whitespace).
+- Converted Safety and Cost of Living into ordinal numeric levels:
+- Low = 1, Medium = 2, Medium-High = 3, High = 4
+- Converted tourist counts from strings (e.g., "14 million") to numeric format.
+- Dropped rows with missing or malformed critical values.
+ 
+# Exploratory Data Analysis (EDA)
+
+- Histogram: Visa Refusal Rates
+o Right-skewed distribution
+o Most countries have low refusal rates, indicating generally lenient visa
+policies.
+- Scatter Plot: Visa Refusal Rate vs. Tourist Volume
+o Weak negative trend observed.
+o Higher refusal rates tend to correspond with fewer tourists.
+o Outliers present, but general pattern supports hypothesis.
+- Correlation Heatmap
+o Weak correlation between visa refusal rate and tourist volume (~ -0.02)
+o Stronger correlations among visa metrics (e.g., issued vs. not issued)
+
+# Summary of EDA Visual Findings:
+
+• Countries with low visa refusal rates tend to receive more tourists.
+• Most countries exhibit moderate to low visa refusal rates.
+• Tourist volume is moderately influenced by cost and safety but these are not
+dominant standalone predictors.
+• Visa issuance and refusal metrics are highly internally correlated, confirming data
+consistency.
+
+# Hypothesis Testing
+
+• Performed a two-sample t-test:
+- Group 1: Countries with high visa refusal rates (above median)
+- Group 2: Countries with low refusal rates (below median)
+  
+• Hypotheses:
+- Null Hypothesis (H₀): There is no significant diXerence in tourist volumes
+between countries with high and low visa refusal rates.
+- Alternative Hypothesis (H₁): Countries with lower visa refusal rates have
+significantly higher tourist volumes.
+
+• Results:
+- T-statistic = -17.14
+- P-value = 1.03e-65
+ 
+• Interpretation:
+- The diXerence in tourist volume is statistically significant.
+- Countries with lower visa refusal rates attract significantly more tourists.
+  
+# Key Insights
+
+- Visa policy is a statistically significant factor influencing tourism.
+- While not the only driver, more open visa regimes are associated with higher
+tourist inflow.
+- Clean preprocessing and categorical normalization were essential for valid
+statistical inference.
+- Visual patterns (e.g., scatter plots and histograms) further support statistical
+findings.
+- Technologies Used
+• Python: Pandas, NumPy, Matplotlib, Seaborn, SciPy
+• Environment: Jupyter Notebook
+
+# Limitations and Future Work
+• This project does not account for visa-free agreements like the Schengen Zone,
+which may distort the relationship.
+• External factors (e.g., pandemics, political instability) are not included but could
+impact tourism.
+
+# Future Improvements
+• Extend the regression model to include Safety and Cost of Living.
+• Add external datasets (e.g., GDP, exchange rates, travel warnings).
+• Create interactive dashboards using Dash or Streamlit.
+• Explore time-series trends if multi-year data becomes available.
+
+
