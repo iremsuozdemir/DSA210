@@ -152,4 +152,13 @@ impact tourism.
 • Create interactive dashboards using Dash or Streamlit.
 • Explore time-series trends if multi-year data becomes available.
 
+### Additional Visualizations
+
+The notebook now includes new visual analyses based solely on the visa dataset:
+
+- **Yearly Trends** in visa applications and approvals (`line plot`)
+- **Visa Approval Rates by Region** (`bar chart`)
+- **Visa Approval Rates by Income Group** (`bar chart`)
+
+These visualizations provide broader context to visa policy patterns and highlight regional or economic disparities in approval trends.
 
