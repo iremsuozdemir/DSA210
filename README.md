@@ -162,13 +162,13 @@ The notebook now includes new visual analyses based solely on the visa dataset:
 
 These visualizations provide broader context to visa policy patterns and highlight regional or economic disparities in approval trends.
 
-#DSA210 Final Project – Phase 3: Machine Learning
+# Phase 3: Machine Learning
 
-#Objective
+# Objective
 
 This phase applies machine learning techniques to assess whether visa-related and tourism features can predict tourist volume and group countries based on similar characteristics. Both supervised (regression) and unsupervised (clustering) methods were used.
 
-#Data Preparation and Preprocessing
+# Data Preparation and Preprocessing
 
 The merged dataset combines visa statistics and tourism data per country.
 
@@ -182,9 +182,9 @@ The merged dataset combines visa statistics and tourism data per country.
 
 - Features were scaled using StandardScaler for clustering.
 
-#Supervised Learning – Regression Models
+# Supervised Learning – Regression Models
 
-#Linear Regression
+# Linear Regression
 
 - A baseline model using numeric predictors.
 
@@ -194,7 +194,7 @@ The merged dataset combines visa statistics and tourism data per country.
 
 - Interpretation: Limited linear relationship between predictors and tourist volume.
 
-#Polynomial Regression
+# Polynomial Regression
 
 -PolynomialFeatures was applied to capture non-linear interactions.
 
@@ -202,7 +202,7 @@ The merged dataset combines visa statistics and tourism data per country.
 
 -Suggested presence of some non-linear dependencies.
 
-#Random Forest Regression
+# Random Forest Regression
 
 - Ensemble-based model capturing complex relationships.
 
@@ -212,9 +212,9 @@ The merged dataset combines visa statistics and tourism data per country.
 
 - Unsupervised Learning – Clustering
 
-#K-Means Clustering
+# K-Means Clustering
 
--Normalized input features were clustered using KMeans (k=3).
+- Normalized input features were clustered using KMeans (k=3).
 
 Cluster insights:
 
@@ -226,7 +226,7 @@ Cluster insights:
 
 These analyses revealed country groupings based on tourism profiles and visa metrics.
 
-#Conclusion and Insights
+# Conclusion and Insights
 
 --Visa refusal rate has strong influence on tourist inflow.
 
