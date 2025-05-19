@@ -162,3 +162,79 @@ The notebook now includes new visual analyses based solely on the visa dataset:
 
 These visualizations provide broader context to visa policy patterns and highlight regional or economic disparities in approval trends.
 
+#DSA210 Final Project – Phase 3: Machine Learning
+
+#Objective
+
+This phase applies machine learning techniques to assess whether visa-related and tourism features can predict tourist volume and group countries based on similar characteristics. Both supervised (regression) and unsupervised (clustering) methods were used.
+
+#Data Preparation and Preprocessing
+
+The merged dataset combines visa statistics and tourism data per country.
+
+- "Safety" and "Cost of Living" were mapped to ordinal values.
+
+- "Cultural Score" was engineered using word count of descriptions.
+
+- Categorical features such as income groups were one-hot encoded.
+
+- Missing and invalid values were removed.
+
+- Features were scaled using StandardScaler for clustering.
+
+#Supervised Learning – Regression Models
+
+#Linear Regression
+
+- A baseline model using numeric predictors.
+
+- R² Score: ~0.15
+
+- RMSE: ~4.4 million
+
+- Interpretation: Limited linear relationship between predictors and tourist volume.
+
+#Polynomial Regression
+
+-PolynomialFeatures was applied to capture non-linear interactions.
+
+-Slight improvement in R² and RMSE compared to baseline.
+
+-Suggested presence of some non-linear dependencies.
+
+#Random Forest Regression
+
+- Ensemble-based model capturing complex relationships.
+
+- Outperformed linear models in both R² and RMSE.
+
+- Showed higher importance for variables like visa refusal rate, cost of living, and safety.
+
+- Unsupervised Learning – Clustering
+
+#K-Means Clustering
+
+-Normalized input features were clustered using KMeans (k=3).
+
+Cluster insights:
+
+-Cluster distribution by country
+
+-Boxplots showing tourist volume per cluster
+
+-Heatmaps of average feature values per cluster
+
+These analyses revealed country groupings based on tourism profiles and visa metrics.
+
+#Conclusion and Insights
+
+--Visa refusal rate has strong influence on tourist inflow.
+
+--Cultural and safety indicators improve predictions but are not solely decisive.
+
+--Random Forest provided best performance among tested models.
+
+--Clustering supports segmentation strategies for policy design.
+
+Future improvements could include external features such as GDP, population, visa-free status, and seasonal factors to enhance model accuracy and insights.
+
